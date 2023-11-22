@@ -1,9 +1,10 @@
-import Image from 'next/image'
+import UserHomePage from "./pages/User_Home/userHomePage";
 
 export default function Home() {
   return (
-    <div>
-      NEARLYYYYY
-    </div>
+    <>
+      NEARLYYYYY - Linking Home Page Now 
+      <UserHomePage/>
+    </>
   )
 }
