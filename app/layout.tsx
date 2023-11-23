@@ -17,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={opnsns.className}>{children}</body>
+      <body className={opnsns.className}>{children}
+      
+      </body>
     </html>
   )
 }
