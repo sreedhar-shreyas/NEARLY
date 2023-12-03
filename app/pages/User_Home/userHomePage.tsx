@@ -1,6 +1,7 @@
 import Herosection from "@/app/components/homepage/section1/Herosection"
 import About from "../About/about"
 
+
 function UserHomePage() {
   return (
     <>
@@ -11,6 +12,8 @@ function UserHomePage() {
 
       <Herosection/>
       ^this is a section
+
+      
     </>
   )
 }
