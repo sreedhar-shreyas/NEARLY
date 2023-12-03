@@ -4,7 +4,7 @@ import UserHomePage from "./pages/User_Home/userHomePage";
 export default function Home() {
   return (
     <> 
-    <Navbar/>
+    {/* <Navbar/> */}
 
       <UserHomePage/>
     </>

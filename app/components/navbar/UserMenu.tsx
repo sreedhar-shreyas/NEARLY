@@ -28,7 +28,7 @@ const UserMenu = () => {
        transition
        cursor-pointer"
         >
-          Register!
+         Add your Room!
         </div>
         <div
           onClick={toggleOpen}
