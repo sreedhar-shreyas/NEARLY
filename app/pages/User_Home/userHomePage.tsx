@@ -7,6 +7,7 @@ function UserHomePage() {
   return (
     <>
     <Navbar/>
+    <Herosection/>
     {/* <About/> */}
       {/* this was a page thats linked ^
 

@@ -7,9 +7,8 @@ import UserMenu from "./UserMenu";
 const Navbar = () => {
     return (
         
-        <div className="fixed w-full z-10 shadow-sm bg-white">
-        <div className="py-4
-        border-b-[1px]">
+        <div className="fixed w-full z-10 shadow-sm bg-grey-900 bg-opacity-30 backdrop-filter backdrop-blur-lg border-b border-slate-800">
+        <div className="py-4">
             <Container>
                 <div
                 className="

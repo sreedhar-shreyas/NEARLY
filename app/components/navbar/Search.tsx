@@ -6,6 +6,7 @@ const Search = () => {
     <div
       className="
     border-[1px]
+    border-slate-800
     w-full
     md:w-auto
     py-2
@@ -26,6 +27,7 @@ const Search = () => {
           className="
             text-sm
             font-semibold
+            text-slate-400
             px-6"
         >
           Anywhere
@@ -35,6 +37,7 @@ const Search = () => {
             hidden
             sm:block
             text-sm
+            text-slate-400
             font-semibold
             px-6
             border-x-[1px]
@@ -47,7 +50,7 @@ const Search = () => {
           className="text-sm
             pl-6
             pr-2
-            text-gray-600
+            text-slate-500
             flex
             flex-row
             items-center
