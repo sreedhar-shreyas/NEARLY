@@ -4,6 +4,8 @@ import Navbar from "@/app/components/navbar/Navbar"
 import About from "../About/about"
 import Connect from "../Footer/Connect"
 import FrequentQuestions from "../Footer/FrequentQuestions"
+import WorkingDemo from "../Details/WorkingDemo"
+import AddListing from "../UploadListing/AddListing"
 
 function UserHomePage() {
   return (
@@ -17,9 +19,12 @@ function UserHomePage() {
       <Herosection/>
       ^this is a section */}
       ^this is a section
+<AddListing />
+      <WorkingDemo />
       <FrequentQuestions />
 
       <Connect />
+      
     </>
   )
 }
