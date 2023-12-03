@@ -2,6 +2,8 @@
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import './globals.css'
+import RentModal from './components/models/RentModel'
+import ClientOnly from './components/navbar/ClientOnly'
 
 const opnsns = Open_Sans({ subsets: ['latin'] })
 
@@ -18,6 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={opnsns.className}>{children}</body>
+      <ClientOnly>
+      <RentModal />
+
+      </ClientOnly>
     </html>
   )
 }
