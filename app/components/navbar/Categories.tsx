@@ -1,3 +1,4 @@
+'use client';
 import Container  from "../Container";
 import { MdBedroomChild, MdBedroomParent, MdMeetingRoom, MdTram, MdMyLocation,MdDirectionsCarFilled , MdDirectionsWalk} from "react-icons/md";
 import CategoryBox from "../categorybox/CategoryBox";
