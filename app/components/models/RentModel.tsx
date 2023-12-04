@@ -22,6 +22,7 @@ import ImageUpload from '../inputs/ImageUpload';
 import Input from '../inputs/Input';
 import Heading from '../SectionalHeading';
 import { POST } from '@/app/api/listing/route';
+import AddressInput from '../inputs/AddressInput';
 
 enum STEPS {
   CATEGORY = 0,
@@ -187,11 +188,16 @@ const RentModal = () => {
           title="What is the Location of Rented Apartment?"
           subtitle="Helps to know where are you!!"
         />
-                <Map center={location?.latlng} />
+                <Map center={location?.latlng}  />
+                <div>{location?.latlng}</div>
 
-        <CountrySelect 
+        {/* <CountrySelect 
           value={location} 
           onChange={(value) => setCustomValue('location', value)} 
+        /> */}
+        <AddressInput
+        value={location}
+        onChange={(value) => setCustomValue('location', value)} 
         />
       </div>
     );
