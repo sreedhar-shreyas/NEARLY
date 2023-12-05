@@ -13,8 +13,8 @@ import{
     FormLabel,
     FormMessage,
 } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import Link from 'next/link'
+import { Input } from "@/components/ui/input";
+import Link from 'next/link';
 
 const signInSchema = z.object({
     
@@ -39,8 +39,10 @@ const Page = () => {
             <div className='formWrapper'>
                 <div className='left'>
                     <h3 className='title'>Nearly</h3>
-                    <link href={'/signup'}>
-                        <Button className='border-zinc-500 text-zinc-300 hover:border-zinc-200 hover:text-zinc-100 transition-colors border rounded-full px-8'>Sign Up</Button>
+                    <link href='/signup'>
+                        <a>
+                            <Button className='border-zinc-500 text-zinc-300 hover:border-zinc-200 hover:text-zinc-100 transition-colors border rounded-full px-8'>Sign Up</Button>
+                        </a>    
                     </link>
                 </div>
                 <div className='right'>

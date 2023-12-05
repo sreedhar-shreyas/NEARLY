@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import './globals.css'
 import RentModal from './components/models/RentModel'
-import ClientOnly from './components/navbar/ClientOnly'
+import ClientOnly from './components/ClientOnly'
 
 const opnsns = Open_Sans({ subsets: ['latin'] })
 
