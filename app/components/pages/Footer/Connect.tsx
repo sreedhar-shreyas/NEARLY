@@ -21,8 +21,8 @@ export default function Connect() {
                     <div className="emailHeading font-semibold text-base">
                         Email
                     </div>
-                    <div className="emaildiscription text-lg">Send us an email, and well get back to you promptly</div>
-                    <a href="mailto:hello@relume.io" className="text-blue-500 mt-2">hello@relume.io</a>
+                    <div className='emaildiscription text-lg'>Send us an email, and well get back to you promptly</div>
+                    <a href='mailto:hello@relume.io' className='text-blue-500 mt-2'>hello@relume.io</a>
                 </div>
 
                 <div className="contact text-center flex flex-col items-center mb-4 lg:mb-0">
