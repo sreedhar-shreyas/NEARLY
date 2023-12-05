@@ -20,4 +20,6 @@ const SignUpLayout = ({
 
 }
 
+
+
 export default SignUpLayout;
