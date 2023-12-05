@@ -9,17 +9,17 @@ function UserHomePage() {
   return (
     <>
     
-    <About/>
-      this was a page thats linked ^
+    {/* <About/> */}
+      {/* this was a page thats linked ^ */}
 
 
-      <Herosection/>
-      ^this is a section
-<AddListing />
-      <WorkingDemo />
-      <FrequentQuestions />
+      {/* <Herosection/> */}
+      {/* ^this is a section */}
+{/* <AddListing /> */}
+      {/* <WorkingDemo /> */}
+      {/* <FrequentQuestions />
 
-      <Connect />
+      <Connect /> */}
       
     </>
   )

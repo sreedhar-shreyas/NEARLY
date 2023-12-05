@@ -14,12 +14,15 @@ import { useMemo, useState } from "react";
 import useRentModal from '@/app/hooks/useRentModel';
 
 import Modal from "./Model";
-import Counter from "../inputs/Counter";
+import Counter from "../inputs/RoomateCounter";
 import CategoryInput from '../inputs/CategoryInput';
+import CountrySelect from "../inputs/Country";
 import { categories } from '../navbar/Categories';
 import ImageUpload from '../inputs/ImageUpload';
 import Input from '../inputs/Input';
 import Heading from '../SectionalHeading';
+import { POST } from '@/app/api/listing/route';
+import AddressInput from '../inputs/AddressInput';
 
 enum STEPS {
   CATEGORY = 0,
@@ -61,7 +64,7 @@ const RentModal = () => {
   });
   const location = watch('location');
   const category = watch('category');
-  const guestCount = watch('guestCount');
+  const roomateCount = watch('roomateCount');
   const roomCount = watch('roomCount');
   const bathroomCount = watch('bathroomCount');
   const imageSrc = watch('imageSrc');
@@ -93,6 +96,13 @@ const RentModal = () => {
     if (step !== STEPS.PRICE) {
       return onNext();
     }
+    // const response = await POST(new Request('/api/listings', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(data),
+    // }
     
     setIsLoading(true);
 
@@ -101,7 +111,7 @@ const RentModal = () => {
       toast.success('Listing created!');
       router.refresh();
       reset();
-      setStep(STEPS.CATEGORY)
+      setStep(STEPS.CATEGORY) 
       rentModal.onClose();
     })
     .catch(() => {
@@ -131,7 +141,6 @@ const RentModal = () => {
   }, [step]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const handleCategoryClick = (label: string) => {
-   
     if (selectedCategories.includes(label)) {
       setSelectedCategories((prev) => prev.filter((category) => category !== label));
     } else {
@@ -172,6 +181,122 @@ const RentModal = () => {
     </div>
   )
   
+  if (step === STEPS.LOCATION) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="What is the Location of Rented Apartment?"
+          subtitle="Helps to know where are you!!"
+        />
+                <Map center={location?.latlng}  />
+                <div>{location?.latlng}</div>
+
+        {/* <CountrySelect 
+          value={location} 
+          onChange={(value) => setCustomValue('location', value)} 
+        /> */}
+        <AddressInput
+        value={location}
+        onChange={(value) => setCustomValue('location', value)} 
+        />
+      </div>
+    );
+  }
+
+  if (step === STEPS.INFO) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="Share some basics about your place"
+          subtitle="What amenitis do you have?"
+        />
+        <Counter 
+          onChange={(value) => setCustomValue('roomateCount', value)}
+          value={roomateCount}
+          title="Roomates" 
+          subtitle="How many roomates are allowed?"
+        />
+        <hr />
+        <Counter 
+          onChange={(value) => setCustomValue('roomCount', value)}
+          value={roomCount}
+          title="Rooms" 
+          subtitle="How many Bedroom in an Apartment?"
+        />
+        <hr />
+        <Counter 
+          onChange={(value) => setCustomValue('bathroomCount', value)}
+          value={bathroomCount}
+          title="Bathrooms" 
+          subtitle="How many Bathrooms in an Apartment?"
+        />
+      </div>
+    )
+  }
+
+  if (step === STEPS.IMAGES) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="Add a photo of your place"
+          subtitle="Show guests what your place looks like!"
+        />
+        <ImageUpload
+          onChange={(value) => setCustomValue('imageSrc', value)}
+          value={imageSrc}
+        />
+      </div>
+    )
+  }
+  if (step === STEPS.DESCRIPTION) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="How would you describe your place?"
+          subtitle="Short and sweet works best!"
+        />
+        <Input
+          id="title"
+          label="Title"
+          disabled={isLoading}
+          register={register}
+          errors={errors}
+          required
+        />
+        <hr />
+        <Input
+          id="description"
+          label="Description"
+          disabled={isLoading}
+          register={register}
+          errors={errors}
+          required
+        />
+      </div>
+    )
+  }
+
+  if (step === STEPS.PRICE) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="Now, set your price"
+          subtitle="How much do you charge per night?"
+        />
+        <Input
+          id="price"
+          label="Price"
+          formatPrice 
+          type="number" 
+          disabled={isLoading}
+          register={register}
+          errors={errors}
+          required
+        />
+      </div>
+    )
+  }
+
   return (
     <Modal
       disabled={isLoading}
