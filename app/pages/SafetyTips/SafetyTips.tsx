@@ -15,7 +15,7 @@ const Safety: React.FC = () => {
             <div className="lg:pr-8 lg:pt-4">
               <div className="lg:max-w-lg">
                 <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Safety Tips</p>
-                <p className="mt-6 text-lg leading-8 text-gray-600">Ensuring the safety and well-being of our community members is our top priority. As you embark on the exciting journey of searching for the perfect apartment, it's crucial to prioritize safety in every step of the way. From exploring potential neighborhoods to finalizing lease agreements, here are some essential safety tips to keep in mind:</p>
+                <p className="mt-6 text-lg leading-8 text-gray-600">Ensuring the safety and well-being of our community members is our top priority. As you embark on the exciting journey of searching for the perfect apartment, it&apos;s crucial to prioritize safety in every step of the way. From exploring potential neighborhoods to finalizing lease agreements, here are some essential safety tips to keep in mind:</p>
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                   <div className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
