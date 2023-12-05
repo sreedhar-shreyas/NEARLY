@@ -8,9 +8,9 @@ import useRentModel from "@/app/hooks/useRentModel";
 function AddListing() {
   const rentModel=useRentModel();
 
-  const onRent =useCallback(()=>{
+  const onRent = useCallback(()=>{
 
-    rentModel.onOpen();
+    // rentModel.onOpen();
       //check if user is loged in
 
 

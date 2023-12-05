@@ -2,14 +2,25 @@
 
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../Avatar";
+import { SafeUser } from "@/app/types";
+
 import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
-const UserMenu = () => {
+
+interface UserMenuProps {
+  currentUser?: SafeUser | null
+}
+
+
+const UserMenu: React.FC<UserMenuProps> = ({
+  currentUser
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
+  
 
   return (
     <div className="relative">
@@ -49,7 +60,7 @@ const UserMenu = () => {
         >
           <AiOutlineMenu />
           <div className="hidden md:block">
-            <Avatar />
+            <Avatar src={currentUser?.image} />
           </div>
         </div>
       </div>
