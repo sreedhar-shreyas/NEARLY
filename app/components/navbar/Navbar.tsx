@@ -1,7 +1,7 @@
 'use client';
 
 import { SafeUser } from "@/app/types";
-
+import React from 'react';
 import Categories from "./Categories";
 import Container from "../Container";
 import Logo from "./Logo";
