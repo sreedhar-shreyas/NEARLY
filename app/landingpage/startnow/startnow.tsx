@@ -3,8 +3,8 @@ import React from 'react';
 
 const StartNow: React.FC = () => {
   return (
-    <div className="w-full h-full relative">
-      <div className="w-1440 h-1601 absolute top-0 left-0 bg-white"></div>
+    <div className="w-full h-full relative ">
+      <div className="w-1440 h-1601 absolute top-0 left-0 bg-white rounded-lg shadow m-4 dark:bg-white-800"></div>
       <div className="absolute w-3309 h-1852 left-neg-927 top-676" style={{ width: '3309px', height: '1852px', left: '-927px', top: '676px', position: 'absolute' }}>
         <div className="absolute w-1854 h-1850 left-0 top-0 bg-gradient-to-b from-purple-500 via-transparent to-transparent shadow-2xl rounded-full blur-[100px]" style={{ width: '1854px', height: '1850px', left: '0px', top: '0px', position: 'absolute', background: 'radial-gradient(50.68% 50.68% at 75.52% 88.61%, rgba(210, 97, 255, 0.79) 0%, rgba(210, 97, 255, 0) 100%)', boxShadow: '100px 100px 100px', borderRadius: '9999px', filter: 'blur(100px)' }}></div>
         <div style={{ width: '1850px', height: '1852px', left: '3309px', top: '0px', position: 'absolute', transform: 'rotate(-180deg)', transformOrigin: '0 0', background: 'radial-gradient(45.53% 45.53% at 66.14% 69.35%, rgba(0, 218, 255, 0.79) 0%, rgba(0, 218, 255, 0) 100%)', boxShadow: '100px 100px 100px', borderRadius: '9999px', filter: 'blur(100px)' }}></div>

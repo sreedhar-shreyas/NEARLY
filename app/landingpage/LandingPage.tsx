@@ -8,10 +8,19 @@ import StartNow from "./startnow/startnow";
 export default function LandingPage(){
     return (<>
     <Hero/>
-    <div>Landing Page</div>
+        
+    <div>     
+           
+        Landing Page
+    
+    </div>
+
+    <StartNow/>    
+    
     <Connect/>
+    
     <FrequentQuestions/>
-    <StartNow/>
+    
     
     </>
       
