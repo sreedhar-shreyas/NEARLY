@@ -7,10 +7,12 @@ import { SafeUser } from "@/app/types";
 import { signOut } from "next-auth/react";
 import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
-import LoginPage from "@/pages/Login/Login";
+import LoginPage from "@/app/login/page";
 import useRentModel from "@/app/hooks/useRentModel";
 import useLoginModal from "@/app/hooks/useLoginModal";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
+import Search from "./Search";
+import Categories from "./Categories";
 interface UserMenuProps {
   currentUser?: SafeUser | null
 }
@@ -42,6 +44,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
   return (
     <div className="relative">
       <div className="flex flow-row items-center gap-3">
+      <Search />
         <div
           // onClick={(onRent)}
           className="
@@ -124,16 +127,17 @@ const UserMenu: React.FC<UserMenuProps> = ({
                   label="Logout" 
                   onClick={() => signOut()}
                 />
+                <Categories />
               </>
             ) : (
               <>
                 <MenuItem 
                   label="Login" 
-                  onClick={() => router.push('/Login')}
+                  onClick={() => router.push('/login')}
                 />
                 <MenuItem 
                   label="Sign up" 
-                  onClick={registerModal.onOpen}
+                  onClick={() => router.push('/signup')}
                 />
               </>
             )}

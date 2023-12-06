@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import User from "@/app/models/usermodel";
 import { connect } from "@/app/dbconfig/dbconfig";
 
-connect();
+connect()
 
 export async function GET(request:NextRequest){
 
