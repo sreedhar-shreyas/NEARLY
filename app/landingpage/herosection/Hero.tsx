@@ -60,7 +60,7 @@ export default function Hero() {
                     <span className="ml-3">
                       <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.00004 5H9.33337M9.33337 5L5.33337 1M9.33337 5L5.33337 9" stroke="url(#paint0_linear_3112_14890)" stroke-width="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                        <defs><linearGradient id="paint0_linear_3112_14890" x1="9.46358" y1="-1.5" x2="5.46163" y2="9.11123" gradientUnits="userSpaceOnUse"><stop stop-color="#ACE348"><stop offset="1" stop-color="#25ACA0"></stop></stop></linearGradient></defs>
+                        <defs><linearGradient id="paint0_linear_3112_14890" x1="9.46358" y1="-1.5" x2="5.46163" y2="9.11123" gradientUnits="userSpaceOnUse"><stop stopColor="#ACE348"><stop offset="1" stopColor="#25ACA0"></stop></stop></linearGradient></defs>
                       </svg>
                     </span>
                   </div>
