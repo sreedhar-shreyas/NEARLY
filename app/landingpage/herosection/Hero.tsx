@@ -59,7 +59,7 @@ export default function Hero() {
                     <span className="text-transparent bg-clip-text bg-gradient-to-b font-bold from-green-500 via-green-500 to-teal-400 transition duration-300" >Read more</span>
                     <span className="ml-3">
                       <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.00004 5H9.33337M9.33337 5L5.33337 1M9.33337 5L5.33337 9" stroke="url(#paint0_linear_3112_14890)" stroke-width="1.5" strokeLinecap="round" stroke-linejoin="round"></path>
+                        <path d="M1.00004 5H9.33337M9.33337 5L5.33337 1M9.33337 5L5.33337 9" stroke="url(#paint0_linear_3112_14890)" stroke-width="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                         <defs><linearGradient id="paint0_linear_3112_14890" x1="9.46358" y1="-1.5" x2="5.46163" y2="9.11123" gradientUnits="userSpaceOnUse"><stop stop-color="#ACE348"><stop offset="1" stop-color="#25ACA0"></stop></stop></linearGradient></defs>
                       </svg>
                     </span>
@@ -85,14 +85,14 @@ export default function Hero() {
         </div>
         <div className="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-md z-50">
           <div className="navbar-backdrop fixed inset-0 bg-teal-800 opacity-70"></div>
-          <nav className="relative flex flex-col py-6 px-10 w-full h-full bg-white overflow-y-auto" data-config-id="toggle-mobile-2" data-config-target=".navbar-menu" data-config-className="hidden">
+          <nav className="relative flex flex-col py-6 px-10 w-full h-full bg-white overflow-y-auto">
             <div className="flex mb-auto items-center">
               <Link className="inline-block mr-auto" href="#">
                 {/* <Image className="h-10" src="aurora-assets/logos/aurora-logo.svg" alt="" data-config-id="auto-img-3-1"> */}
               </Link>
               <Link className="navbar-close" href="#">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-config-id="auto-svg-5-1">
-                  <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2" strokeLinecap="round" stroke-linejoin="round"></path>
+                  <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path>
                 </svg>
               </Link>
             </div>

@@ -1,8 +1,11 @@
+import Catnavbar from "./catnavbar/Catnavbar";
+
 export default function ProfilePage() {
 
     return (
         <>
         <div>
-            Dashbuoard </div></>
+            Dashbuoard
+            <Catnavbar/> </div></>
     );
 }

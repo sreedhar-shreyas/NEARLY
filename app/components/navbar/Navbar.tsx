@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   return ( 
     <><div className=" position-sticky w-full bg-slate-950 z-10 shadow-sm ">
-        <nav className="relative" data-config-id="toggle-mobile" data-config-target=".navbar-menu" data-config-className="hidden">
+        <nav className="relative">
           <div className="container mx-auto px-4">
             <div className="relative flex h-24 items-center">
               <Link className="inline-block" href="/">
@@ -26,9 +26,9 @@ const Navbar: React.FC<NavbarProps> = ({
               </Link>
               <button className="lg:hidden navbar-burger flex items-center justify-center h-10 w-10 ml-auto border border-teal-900 bg-teal-200 bg-opacity-30 hover:bg-teal-700 rounded-lg">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
-                  <path d="M3 5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M3 12H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M3 19H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M3 5H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                  <path d="M3 12H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                  <path d="M3 19H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                 </svg>
               </button>
               

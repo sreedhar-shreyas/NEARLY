@@ -1,7 +1,7 @@
 import Herosection from "@/app/components/homepage/section1/Herosection"
 //import About from "../About/about"
 import Home from "../Home/home"
-import Safety from "../SafetyTips/SafetyTips"
+import Safety from "../../landingpage/SafetyTips"
 import Premium from "../Premium/Premium"
 
 
