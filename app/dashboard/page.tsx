@@ -1,3 +1,4 @@
+'use client';
 import Catnavbar from "./catnavbar/Catnavbar";
 import getListings, { 
     IListingsParams
