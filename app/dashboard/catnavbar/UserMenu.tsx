@@ -1,16 +1,16 @@
 "use client";
-import React from "react";
+
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../../components/Avatar";
   import { useRouter } from "next/navigation";
-import { SafeUser } from "../../types";
+import { SafeUser } from "@/app/types";
 import { signOut } from "next-auth/react";
 import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
-import LoginPage from "../../login/page";
-import useRentModel from "../../hooks/useRentModel";
-import useLoginModal from "../../hooks/useLoginModal";
-import useRegisterModal from "../../hooks/useRegisterModal";
+import LoginPage from "@/app/login/page";
+import useRentModel from "@/app/hooks/useRentModel";
+import useLoginModal from "@/app/hooks/useLoginModal";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
 import Search from "./Search";
 import Categories from "../catnavbar/Categories";
 import { AuthMechanism } from "mongodb";

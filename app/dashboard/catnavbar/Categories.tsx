@@ -3,7 +3,7 @@ import Container from "../../components/Container"
 import { MdBedroomChild, MdBedroomParent, MdMeetingRoom, MdTram, MdMyLocation,MdDirectionsCarFilled , MdDirectionsWalk} from "react-icons/md";
 import CategoryBox from "../../components/CategoryBox";
 import { RiPinDistanceLine } from "react-icons/ri";
-import React from "react";
+import { useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 export const categories =[
     {

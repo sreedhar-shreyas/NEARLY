@@ -1,6 +1,6 @@
 'use client';
 
-import { SafeUser } from "../../types";
+import { SafeUser } from "@/app/types";
 import React from 'react';
 import Categories from "./Categories";
 import Container from "../Container";
@@ -8,12 +8,12 @@ import Logo from "./Logo";
 import Search from "./Search";
 import UserMenu from "./UserMenu";
 import Link from "next/link";
-import LoginPage from "../../login/page";
-import useRegisterModal from "../../hooks/useRegisterModal";
-import useLoginModal from "../../hooks/useLoginModal";
+import LoginPage from "@/app/login/page";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
+import useLoginModal from "@/app/hooks/useLoginModal";
 
 
-import useRentModel from "../../hooks/useRentModel";
+import useRentModel from "@/app/hooks/useRentModel";
 import { useCallback, useState } from "react";
 
 import { useRouter } from "next/navigation";
@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({
     
 
     rentModal.onOpen();
-  }, [rentModal]);
+  }, [loginModal, rentModal, currentUser]);
   return ( 
     <><div className=" position-sticky w-full bg-slate-950 z-10 shadow-sm ">
         <nav className="relative">

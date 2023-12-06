@@ -1,12 +1,11 @@
 'use client';
-import React from "react";
 import Catnavbar from "./catnavbar/Catnavbar";
 import getListings, { 
     IListingsParams
-  } from "../../app/actions/getListings";
+  } from "@/app/actions/getListings";
   import Container from "../components/Container"
   import EmptyState from "../components/EmptyState"
-  import getCurrentUser from "../../app/actions/getCurrentUser";
+  import getCurrentUser from "@/app/actions/getCurrentUser";
 
   import ClientOnly from "../components/ClientOnly";
 import ListingCard from "../components/listings/ListingCard";
@@ -16,7 +15,6 @@ import ListingCard from "../components/listings/ListingCard";
   };
 
 
-  // eslint-disable-next-line @next/next/no-async-client-component
   const Dashboard = async ({ searchParams }: HomeProps) => {
     const listings = await getListings(searchParams);
     const currentUser = await getCurrentUser();
