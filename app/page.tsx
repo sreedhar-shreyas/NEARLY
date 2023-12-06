@@ -4,11 +4,11 @@ import RentModal from "./components/models/RentModel";
 import Navbar from "./components/navbar/Navbar";
 import UserHomePage from "./components/pages/User_Home/userHomePage";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import LandingPage from "./landingpage/LandingPage";
 
 export default function Page() {
   return (
   <>
-  <Navbar/>
-  <Lpnavbar/>
+ <LandingPage/>
   </>)
 }
