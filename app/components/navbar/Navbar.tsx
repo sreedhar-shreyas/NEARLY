@@ -8,6 +8,15 @@ import Logo from "./Logo";
 import Search from "./Search";
 import UserMenu from "./UserMenu";
 import Link from "next/link";
+import LoginPage from "@/app/login/page";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
+import useLoginModal from "@/app/hooks/useLoginModal";
+
+
+import useRentModel from "@/app/hooks/useRentModel";
+import { useCallback, useState } from "react";
+
+import { useRouter } from "next/navigation";
 
 interface NavbarProps {
   currentUser?: SafeUser | null;
@@ -15,7 +24,26 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({
   currentUser,
+  
 }) => {
+  const router = useRouter();
+  const loginModal = useLoginModal();
+  const registerModal = useRegisterModal();
+
+
+  const rentModal = useRentModel();
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = useCallback(() => {
+    setIsOpen((value) => !value);
+  }, []);
+
+  const onRent = useCallback(() => {
+    
+
+    rentModal.onOpen();
+  }, [loginModal, rentModal, currentUser]);
   return ( 
     <><div className=" position-sticky w-full bg-slate-950 z-10 shadow-sm ">
         <nav className="relative">
@@ -41,13 +69,13 @@ const Navbar: React.FC<NavbarProps> = ({
               </div>
               <div className="hidden lg:block ml-auto">
                 <Link className="inline-flex items-center justify-center h-10 mr-4 px-4 text-center text-sm text-white hover:text-teal-400 font-semibold transition duration-200" href="/login" >Login</Link>
-                <Link className="group inline-block justify-center p-1 text-center text-sm text-white font-semibold rounded-lg" href="/signup">
+                <div  onClick={(onRent)} className="group inline-block justify-center p-1 text-center text-sm text-white font-semibold rounded-lg">
                   <div className="inline-flex items-stretch h-10 p-0.5 rounded-lg bg-gradient-to-b from-gray-500 via-gray-700 to-gray-700 hover:to-gray-800">
                     <div className="flex items-center px-4 bg-gray-700 group-hover:bg-opacity-40 rounded-md transition duration-300">
                       <span>Get Started</span>
                     </div>
                   </div>
-                </Link>
+                </div>
               </div>
             </div>
           </div>
