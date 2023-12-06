@@ -1,0 +1,101 @@
+// import React, { useCallback } from 'react';
+// import { useState } from 'react';
+// import { TbPhotoPlus } from 'react-icons/tb';
+
+// interface ImageUploadProps {
+//   onChange: (value: string[]) => void;
+//   value: string[];
+// }
+
+// const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
+//   const handleUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+//     const files = event.target.files;
+
+//     if (files) {
+//       const images: string[] = [];
+//       const readerPromises: Promise<void>[] = [];
+
+//       for (let i = 0; i < files.length; i++) {
+//         const reader = new FileReader();
+
+//         readerPromises.push(
+//           new Promise<void>((resolve) => {
+//             reader.onload = () => {
+//               images.push(reader.result as string);
+//               resolve();
+//             };
+//           })
+//         );
+
+//         reader.readAsDataURL(files[i]);
+//       }
+
+//       Promise.all(readerPromises).then(() => {
+//         onChange(images);
+//       });
+//     }
+//   }, [onChange]);
+
+//   return (
+//     <div className="
+//       relative
+//       cursor-pointer
+//       hover:opacity-70
+//       transition
+//       border-dashed 
+//       border-2 
+//       p-20 
+//       border-neutral-300
+//       flex
+//       flex-col
+//       justify-center
+//       items-center
+//       gap-4
+//       text-neutral-600
+//     ">
+//       <input
+//         type="file"
+//         accept="image/*"
+//         onChange={handleUpload}
+//         style={{ display: 'none' }}
+//         id="imageInput"
+//         multiple
+//       />
+//       <label htmlFor="imageInput">
+//         <div className="
+//           relative
+//           cursor-pointer
+//           hover:opacity-70
+//           transition
+//           p-20 
+//           flex
+//           flex-col
+//           justify-center
+//           items-center
+//           gap-4
+//           text-neutral-600
+//         ">
+//           <TbPhotoPlus size={50} />
+//           <div className="font-semibold text-lg">
+//             Click to upload
+//           </div>
+//           {value && value.length > 0 && (
+//             <div className="grid grid-cols-2 gap-4">
+//               {value.map((imageUrl, index) => (
+//                 <div key={index} className="relative">
+//                   <img
+//                     src={imageUrl}
+//                     alt={`Uploaded Preview ${index + 1}`}
+//                     className="object-cover w-full h-full"
+//                   />
+//                 </div>
+//               ))}
+//             </div>
+//           )}
+//         </div>
+//       </label>
+//     </div>
+//   );
+// };
+
+// export default ImageUpload;

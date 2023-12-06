@@ -1,56 +1,14 @@
-import Container from "@/app/components/Container";
-import ListingCard from "@/app/components/listings/ListingCard";
-import EmptyState from "@/app/components/EmptyState";
+import Lpnavbar from "./components/homepage/LPnavbar/Lpnavbar";
+import Modal from "./components/models/Model";
+import RentModal from "./components/models/RentModel";
+import Navbar from "./components/navbar/Navbar";
+import UserHomePage from "./components/pages/User_Home/userHomePage";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import LandingPage from "./landingpage/LandingPage";
 
-import getListings, { 
-  IListingsParams
-} from "@/app/actions/getListings";
-import getCurrentUser from "@/app/actions/getCurrentUser";
-import ClientOnly from "./components/ClientOnly";
-
-interface HomeProps {
-  searchParams: IListingsParams
-};
-
-const Home = async ({ searchParams }: HomeProps) => {
-  const listings = await getListings(searchParams);
-  const currentUser = await getCurrentUser();
-
-  if (listings.length === 0) {
-    return (
-      <ClientOnly>
-        <EmptyState showReset />
-      </ClientOnly>
-    );
-  }
-
+export default function Page() {
   return (
-    <ClientOnly>
-      <Container>
-        <div 
-          className="
-            pt-24
-            grid 
-            grid-cols-1 
-            sm:grid-cols-2 
-            md:grid-cols-3 
-            lg:grid-cols-4
-            xl:grid-cols-5
-            2xl:grid-cols-6
-            gap-8
-          "
-        >
-          {listings.map((listing) => (
-            <ListingCard
-              currentUser={currentUser}
-              key={listing.id}
-              data={listing}
-            />
-          ))}
-        </div>
-      </Container>
-    </ClientOnly>
-  )
+  <>
+ <LandingPage/>
+  </>)
 }
-
-export default Home;
