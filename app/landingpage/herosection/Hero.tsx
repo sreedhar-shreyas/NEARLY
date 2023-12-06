@@ -59,7 +59,7 @@ export default function Hero() {
                     <span className="text-transparent bg-clip-text bg-gradient-to-b font-bold from-green-500 via-green-500 to-teal-400 transition duration-300" >Read more</span>
                     <span className="ml-3">
                       <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.00004 5H9.33337M9.33337 5L5.33337 1M9.33337 5L5.33337 9" stroke="url(#paint0_linear_3112_14890)" stroke-width="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+                        <path d="M1.00004 5H9.33337M9.33337 5L5.33337 1M9.33337 5L5.33337 9" stroke="url(#paint0_linear_3112_14890)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                         <defs><linearGradient id="paint0_linear_3112_14890" x1="9.46358" y1="-1.5" x2="5.46163" y2="9.11123" gradientUnits="userSpaceOnUse"><stop stopColor="#ACE348"><stop offset="1" stopColor="#25ACA0"></stop></stop></linearGradient></defs>
                       </svg>
                     </span>
@@ -92,7 +92,7 @@ export default function Hero() {
               </Link>
               <Link className="navbar-close" href="#">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-config-id="auto-svg-5-1">
-                  <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                  <path d="M6 18L18 6M6 6L18 18" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                 </svg>
               </Link>
             </div>
