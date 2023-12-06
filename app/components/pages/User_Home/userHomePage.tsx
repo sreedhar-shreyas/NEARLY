@@ -1,7 +1,7 @@
 import Herosection from "@/app/components/homepage/section1/Herosection"
 import About from "../About/about"
-import Connect from "../Footer/Connect"
-import FrequentQuestions from "../Footer/FrequentQuestions"
+import Connect from "../../homepage/Footer/Connect"
+import FrequentQuestions from "../../homepage/Footer/FrequentQuestions"
 import WorkingDemo from "../Details/WorkingDemo"
 import AddListing from "../UploadListing/AddListing"
 
