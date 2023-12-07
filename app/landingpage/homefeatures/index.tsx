@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../globals.css';
-
+import './styles.css'
 
 
 export default function Index() {

@@ -1,8 +1,11 @@
 import React from 'react'
+import LandingPage from '../landingpage/LandingPage'
 
 function HowitWorks() {
   return (
-    <div>Premium</div>
+    <div>
+      <LandingPage />
+    </div>
   )
 }
 

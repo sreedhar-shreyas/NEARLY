@@ -42,7 +42,7 @@ const ListingReservation: React.FC<
           $ {price}
         </div>
         <div className="font-light text-neutral-600">
-          night
+          Per Day
         </div>
       </div>
       <hr />
@@ -56,7 +56,7 @@ const ListingReservation: React.FC<
       <div className="p-4">
         <Button 
           disabled={disabled} 
-          label="Reserve" 
+          label="Contact Owner to Schedule Call" 
           onClick={onSubmit}
         />
       </div>
