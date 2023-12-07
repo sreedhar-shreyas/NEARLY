@@ -1,33 +1,60 @@
+import { Nunito } from 'next/font/google'
 
-import type { Metadata } from 'next'
-import { Open_Sans } from 'next/font/google'
+import Navbar from '@/app/components/navbar/Navbar';
+import LoginModal from '@/app/components/modals/LoginModal';
+import RegisterModal from '@/app/components/modals/RegisterModal';
+import SearchModal from '@/app/components/modals/SearchModal';
+import RentModal from '@/app/components/modals/RentModal';
+
+import ToasterProvider from '@/app/providers/ToasterProvider';
+
 import './globals.css'
-import RentModal from './components/models/RentModel'
-import ClientOnly from './components/navbar/ClientOnly'
-import Navbar from './components/navbar/Navbar'
+import ClientOnly from './components/ClientOnly';
+import getCurrentUser from './actions/getCurrentUser';
+import { SafeUser } from "@/app/types";
 
-const opnsns = Open_Sans({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'NEARLY',
-  description: 'A NORTHEASTERN UNI ROOMMATE-APARTMENT FINDER',
+export const metadata = {
+  title: 'Nearly',
+  description: 'Nearly',
 }
 
-export default function RootLayout({
+interface UserMenuProps {
+  currentUser?: SafeUser | null
+}
+
+const font = Nunito({ 
+  subsets: ['latin'], 
+});
+interface RootLayout {
+  currentUser?: SafeUser | null
+}
+
+interface UserMenuProps {
+  currentUser?: SafeUser | null
+}
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const currentUser = await getCurrentUser();
+
   return (
     <html lang="en">
-      <body className={opnsns.className}>
-        <Navbar/>
-        {children}</body>
-{/* 
-      <ClientOnly>
-      <RentModal />
-
-      </ClientOnly> */}
+      <body className={font.className}>
+        <ClientOnly>
+          <ToasterProvider />
+          <LoginModal />
+          <RegisterModal />
+          <SearchModal />
+          <RentModal />
+          <Navbar currentUser={currentUser} />
+        </ClientOnly>
+        <div className="pb-20 pt-28">
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
