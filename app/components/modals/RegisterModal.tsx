@@ -105,7 +105,6 @@ console.log("Register,",{data})
 
 
 
-
     </div>
   )
 
