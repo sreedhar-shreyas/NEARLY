@@ -53,9 +53,14 @@ const LoginModal = () => {
 
       if (callback?.ok) {
         toast.success('Logged in');
+        if (data.email === 'r') {
+          // Route to admin page
+          router.push('/adminpanel');
+        } else {
         router.refresh();
         loginModal.onClose();
       }
+    }
       
       if (callback?.error) {
         toast.error(callback.error);
