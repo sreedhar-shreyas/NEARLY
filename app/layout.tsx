@@ -18,20 +18,9 @@ export const metadata = {
   description: 'Nearly',
 }
 
-interface UserMenuProps {
-  currentUser?: SafeUser | null
-}
-
 const font = Nunito({ 
   subsets: ['latin'], 
 });
-interface RootLayout {
-  currentUser?: SafeUser | null
-}
-
-interface UserMenuProps {
-  currentUser?: SafeUser | null
-}
 
 export default async function RootLayout({
   children,
