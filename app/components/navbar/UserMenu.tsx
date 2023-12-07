@@ -46,6 +46,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
         <div 
           onClick={onRent}
           className="
+          
             hidden
             md:block
             text-sm 
@@ -103,7 +104,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
             {currentUser ? (
               <>
                 <MenuItem 
-                  label="Scheduled Video Calls" 
+                  label="Requested Virtual Tours" 
                   onClick={() => router.push('/connections')}
                 />
                 <MenuItem 
