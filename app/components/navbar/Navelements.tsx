@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Logo from "./Logo";
 
 const Navelements = () => {
   const router = useRouter();
@@ -9,7 +10,7 @@ const Navelements = () => {
   return ( 
     <>
     
-
+    
       </>
    );
 }

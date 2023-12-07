@@ -46,6 +46,13 @@ const RegisterModal= () => {
 // if(regExEmail) {
 
 // }
+const email = data.email;
+const regExEmail = /^[\w-\.]+@northeastern\.edu$/.test(email);
+const regExAdmin = /^admin@nearly\.com$/i.test(email); // Use case-insensitive test
+if (!regExEmail && !regExAdmin) {
+  toast.error("Please enter a valid Northeastern University Email address.");
+  return; // Prevent further processing if email is invalid
+}
 
 
     setIsLoading(true);

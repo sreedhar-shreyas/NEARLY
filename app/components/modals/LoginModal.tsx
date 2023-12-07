@@ -53,7 +53,7 @@ const LoginModal = () => {
 
       if (callback?.ok) {
         toast.success('Logged in');
-        if (data.email === 'r') {
+        if (data.email === 'admin@nearly.com') {
           // Route to admin page
           router.push('/adminpanel');
         } else {
