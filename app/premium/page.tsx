@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Premiums from './premium'
 function Premium() {
   return (
-    <div>Premium</div>
+    <Premiums />
   )
 }
 
