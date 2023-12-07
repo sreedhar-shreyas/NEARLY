@@ -39,7 +39,7 @@ export default function Index() {
           Can share a laugh over burnt attempts at cooking without setting off the smoke alarm.
           Believe that cleaning can be a team sport (with extra points for creativity).
           Appreciate the delicate balance between personal space and spontaneous dance parties.
-          💖 Get ready to embark on an apartment adventure with your ideal roomie match! Whether you're in it for the laughs, the shared Netflix binges, or the mutual appreciation for quirky decor, Nearly is here to make your cohabitation dreams come true. 🚀🏠
+          💖 Get ready to embark on an apartment adventure with your ideal roomie match! Whether youre in it for the laughs, the shared Netflix binges, or the mutual appreciation for quirky decor, Nearly is here to make your cohabitation dreams come true. 🚀🏠
 
             </span>
         </div>
@@ -48,7 +48,7 @@ export default function Index() {
         </span>
         <div className='w-[394px] h-[282px] absolute top-[103px] left-[170px] z-[21]' />
         <span className="w-[391px] h-[144px] font-['Arial'] text-[18px] font-normal leading-[28.8px] text-[#080808] absolute top-[195px] left-[170px] text-left z-[24]">
-          Scroll through potential roommates and apartments in your area, swiping right for the perfect match and left for those that don't quite make the cut. Our intuitive interface makes finding the ideal living situation as easy as finding a date on your favorite dating app!
+          Scroll through potential roommates and apartments in your area, swiping right for the perfect match and left for those that dont quite make the cut. Our intuitive interface makes finding the ideal living situation as easy as finding a date on your favorite dating app!
         </span>
         <span
           className="w-[391px] h-[144px] font-['Arial'] text-[18px] font-normal leading-[28.8px] text-[rgba(8,8,8,0.9)] absolute top-[267px] left-[860px] text-left z-[29]"
@@ -61,7 +61,7 @@ export default function Index() {
           2. Can share a laugh over burnt attempts at cooking without setting off the smoke alarm.<br></br>
           3. Believe that cleaning can be a team sport (with extra points for creativity).<br></br>
           4. Appreciate the delicate balance between personal space and spontaneous dance parties.<br></br>
-          💖 Get ready to embark on an apartment adventure with your ideal roomie match! Whether you're in it for the laughs, the shared Netflix binges, or the mutual appreciation for quirky decor, Nearly is here to make your cohabitation dreams come true. 🚀🏠<br></br>
+          💖 Get ready to embark on an apartment adventure with your ideal roomie match! Whether youre in it for the laughs, the shared Netflix binges, or the mutual appreciation for quirky decor, Nearly is here to make your cohabitation dreams come true. 🚀🏠<br></br>
 
  #SwipeRightForRoomies
 
@@ -80,7 +80,7 @@ export default function Index() {
           Tailored Connections for Seamless Co-Living
         </span>
         <span className="w-[391px] h-[144px] font-['Arial'] text-[18px] font-normal leading-[28.8px] text-[#080808] absolute top-[203px] left-[971px] text-left z-[7]">
-          Say goodbye to awkward living situations! Our cutting-edge SmartMatch Algorithm considers your lifestyle, preferences, and habits to connect you with roommates who share your vibe. Whether you're a night owl, a fitness enthusiast, or a Netflix binge-watcher, Nearly ensures you'll be harmonizing with the perfect roomie.
+          Say goodbye to awkward living situations! Our cutting-edge SmartMatch Algorithm considers your lifestyle, preferences, and habits to connect you with roommates who share your vibe. Whether youre a night owl, a fitness enthusiast, or a Netflix binge-watcher, Nearly ensures youll be harmonizing with the perfect roomie.
         </span>
         <div className='w-[394px] h-[18px] rounded-[4px] absolute top-[367px] left-[170px] z-[5]' />
         <span className="h-[18px] font-['Arial'] text-[15px] font-normal leading-[18px] text-[#080808] absolute top-[367px] left-[170px] text-left z-[8]">
