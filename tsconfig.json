@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/libs/prismadb"
-  ],
+, "app/aboutus"  ],
   "exclude": [
     "node_modules"
   ]
