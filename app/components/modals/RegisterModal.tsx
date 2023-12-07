@@ -36,11 +36,16 @@ const RegisterModal= () => {
       name: '',
       email: '',
       password: '',
-      term: ' '
+    
     },
   });
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
+// const email=data.email;
+//     const regExEmail = /^[\w-\.]+@northeastern.edu$/.test(email);
+// if(regExEmail) {
+
+// }
 
 
     setIsLoading(true);
@@ -67,7 +72,7 @@ console.log("Register,",{data})
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading
-        title="Welcome to Airbnb"
+        title="Welcome to Nearly"
         subtitle="Create an account!"
       />
       <Input
@@ -96,15 +101,7 @@ console.log("Register,",{data})
         required
       />
 
-<Input
-        id="term"
-        label="Term"
-        type="Term"
-        disabled={isLoading}
-        register={register}
-        errors={errors}
-        required
-      />
+
 
 
 

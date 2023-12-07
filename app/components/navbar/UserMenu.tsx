@@ -58,7 +58,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
             cursor-pointer
           "
         >
-          Airbnb your home
+          Add your Apartment!
         </div>
         <div 
         onClick={toggleOpen}
@@ -103,23 +103,24 @@ const UserMenu: React.FC<UserMenuProps> = ({
             {currentUser ? (
               <>
                 <MenuItem 
-                  label="My trips" 
-                  onClick={() => router.push('/trips')}
+                  label="Scheduled Video Calls" 
+                  onClick={() => router.push('/connections')}
                 />
                 <MenuItem 
-                  label="My favorites" 
+                  label="Liked Apartments" 
                   onClick={() => router.push('/favorites')}
                 />
                 <MenuItem 
-                  label="My reservations" 
-                  onClick={() => router.push('/reservations')}
-                />
-                <MenuItem 
-                  label="My properties" 
+                  label="My Hosted Apartment" 
                   onClick={() => router.push('/properties')}
                 />
                 <MenuItem 
-                  label="Airbnb your home" 
+                  label="Hosted Apartment: Video Call reservations" 
+                  onClick={() => router.push('/reservations')}
+                />
+                
+                <MenuItem 
+                  label="Add my Apartment" 
                   onClick={rentModal.onOpen}
                 />
                 <hr />
@@ -137,6 +138,22 @@ const UserMenu: React.FC<UserMenuProps> = ({
                 <MenuItem 
                   label="Sign up" 
                   onClick={registerModal.onOpen}
+                />
+                 <MenuItem 
+                  label="About Us" 
+                  onClick={() => router.push('/aboutus')}
+                />
+                 <MenuItem 
+                  label="Safety" 
+                  onClick={() => router.push('/safety')}
+                />
+                 <MenuItem 
+                  label="Premium" 
+                  onClick={() => router.push('/premium')}
+                />
+                 <MenuItem 
+                  label="What is NEARLY?" 
+                  onClick={() => router.push('/howitworks')}
                 />
               </>
             )}

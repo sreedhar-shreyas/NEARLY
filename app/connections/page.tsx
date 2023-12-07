@@ -7,7 +7,7 @@ import getReservations from "@/app/actions/getReservations";
 
 import TripsClient from "./TripsClient";
 
-const TripsPage = async () => {
+const Connections = async () => {
   const currentUser = await getCurrentUser();
 
   if (!currentUser) {
@@ -27,8 +27,8 @@ const TripsPage = async () => {
     return (
       <ClientOnly>
         <EmptyState
-          title="No trips found"
-          subtitle="Looks like you havent reserved any trips."
+          title="No Connections found"
+          subtitle="Looks like you havent contacted any one yet."
         />
       </ClientOnly>
     );
@@ -44,4 +44,4 @@ const TripsPage = async () => {
   );
 }
  
-export default TripsPage;
+export default Connections;

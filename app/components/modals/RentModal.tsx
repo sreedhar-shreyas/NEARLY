@@ -131,7 +131,7 @@ const RentModal = () => {
   let bodyContent = (
     <div className="flex flex-col gap-8">
       <Heading
-        title="Which of these best describes your place?"
+        title="Which of these best describes your Apartment?"
         subtitle="Pick a category"
       />
       <div 
@@ -163,7 +163,7 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="Where is your place located?"
+          title="Where is your apartment located?"
           subtitle="Help guests find you!"
         />
         <CountrySelect 
@@ -179,14 +179,14 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="Share some basics about your place"
-          subtitle="What amenitis do you have?"
+          title="What features does the Apartment Have"
+          subtitle="What amenties do you have?"
         />
         <Counter 
           onChange={(value) => setCustomValue('guestCount', value)}
           value={guestCount}
           title="Guests" 
-          subtitle="How many guests do you allow?"
+          subtitle="How many Roommates already live?"
         />
         <hr />
         <Counter 
@@ -225,8 +225,8 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="How would you describe your place?"
-          subtitle="Short and sweet works best!"
+          title="Add your Listing Description Here?"
+          subtitle="Add something that is Whatsapp Shareable"
         />
         <Input
           id="title"
@@ -253,8 +253,8 @@ const RentModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="Now, set your price"
-          subtitle="How much do you charge per night?"
+          title="Accomodation Pricing"
+          subtitle="How much do you charge per day?"
         />
         <Input
           id="price"
@@ -274,7 +274,7 @@ const RentModal = () => {
     <Modal
       disabled={isLoading}
       isOpen={rentModal.isOpen}
-      title="Airbnb your home!"
+      title="Add My Apartment!"
       actionLabel={actionLabel}
       onSubmit={handleSubmit(onSubmit)}
       secondaryActionLabel={secondaryActionLabel}
