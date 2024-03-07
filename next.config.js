@@ -3,7 +3,8 @@ const nextConfig = {
     
       images: {
         domains: [
-          'res.cloudinary.com']}
+          'res.cloudinary.com',
+        'shreyaswapi.s3.us-east-2.amazonaws.com']}
 }
 
 module.exports = nextConfig
