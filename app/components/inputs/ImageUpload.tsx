@@ -1,4 +1,4 @@
-// Import necessary libraries
+
 import AWS from 'aws-sdk';
 
 import Image from "next/image";
@@ -9,7 +9,7 @@ import { TbPhotoPlus } from 'react-icons/tb';
 const AWS_ACCESS_KEY_ID=process.env.AWS_ACCESS_KEY_ID!;
 
 const AWS_SECRET_ACCESS_KEY=process.env.AWS_SECRET_ACCESS_KEY!;
-
+//d
 AWS.config.update({
   region: 'us-east-2',
   credentials: new AWS.Credentials(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)
@@ -103,57 +103,3 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
 };
 
 export default ImageUpload;
-// ImageUpload component
-// const ImageUpload : React.FC<ImageUploadProps> = ({ onChange, value })=> {
-//   useEffect(() => {
-//     const fetchAndSetImage = async () => {
-//       const imageUrl = await getLatestImageUrl();
-//       onChange(imageUrl);
-//     };
-
-//     fetchAndSetImage();
-//   }, [onChange]);
-
-//   const handleUpload = useCallback((result: { info: { secure_url: string; }; }) => {
-//     onChange(result.info.secure_url);
-//   }, [onChange]);
-
-//   return (
-//     <div
-//       onClick={() => {}}
-//       className="
-//         relative
-//         cursor-pointer
-//         hover:opacity-70
-//         transition
-//         border-dashed 
-//         border-2 
-//         p-20  
-//         border-neutral-300
-//         flex
-//         flex-col
-//         justify-center
-//         items-center
-//         gap-4
-//         text-neutral-600
-//       "
-//     >
-//       <TbPhotoPlus size={50} />
-//       <div className="font-semibold text-lg">
-//         Click to upload
-//       </div>
-//       {value && (
-//         <div className="absolute inset-0 w-full h-full">
-//           <Image
-//             fill 
-//             style={{ objectFit: 'cover' }} 
-//             src={value} 
-//             alt="House Added" 
-//           />
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default ImageUpload;
