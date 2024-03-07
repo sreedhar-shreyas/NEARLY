@@ -6,9 +6,9 @@ import { useCallback, useEffect, useState } from "react";
 import { TbPhotoPlus } from 'react-icons/tb';
 
 
-var AWS_ACCESS_KEY_ID="AKIAVWDKZCK362XOELGR"
+const AWS_ACCESS_KEY_ID=process.env.AWS_ACCESS_KEY_ID!;
 
-var AWS_SECRET_ACCESS_KEY="00JFqqgBhliLJl7VwakmmKFDclNoCk7FlCB1ZTLF"
+const AWS_SECRET_ACCESS_KEY=process.env.AWS_SECRET_ACCESS_KEY!;
 
 AWS.config.update({
   region: 'us-east-2',
